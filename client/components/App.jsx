@@ -1,8 +1,13 @@
 import React from 'react'
 
+import Pixel from './Pixel'
+
 const App = () => {
   return (
-    <div>React development has begun!</div>
+    <React.Fragment>
+      <div>React development has begun!</div>
+      <Pixel />
+    </React.Fragment>
   )
 }
 
