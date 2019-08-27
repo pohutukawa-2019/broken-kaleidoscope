@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 class Pixel extends React.Component {
   constructor (props) {
@@ -10,13 +10,15 @@ class Pixel extends React.Component {
     `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
   clickHandler = evt => {
-    this.setState({
-      style: {
-        backgroundColor: `${this.randomHexColor()}`,
-        width: '50px',
-        height: '50px'
-      }
-    })
+    setInterval(() => {
+      this.setState({
+        style: {
+          backgroundColor: `${this.randomHexColor()}`,
+          width: '50px',
+          height: '50px'
+        }
+      })
+    }, 2000)
   }
 
   mouseEnterHandler = evt => {
@@ -59,14 +61,27 @@ class Pixel extends React.Component {
     })
   }
 
+  timedChange = evt => {
+    setInterval(() => {
+      this.setState({
+        style: {
+          backgroundColor: `${this.randomHexColor()}`,
+          width: '50px',
+          height: '50px'
+        }
+      })
+    }, 2000)
+  }
+
   render () {
     return (
-      <div style={this.state.style} 
-        onClick={this.clickHandler} 
+      <div style={this.state.style}
+        onClick={this.clickHandler}
         onMouseEnter={this.mouseEnterHandler} 
         onContextMenu={this.contextMenu} 
         onDoubleClick={this.doubleClick}
         onDragEnter={this.dragEnter}
+        onLoadStart={this.timedChange}
       > </div>
     )
   }
