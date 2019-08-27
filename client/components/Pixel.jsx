@@ -22,13 +22,15 @@ class Pixel extends React.Component {
   }
 
   mouseEnterHandler = evt => {
-    this.setState({
-      style: {
-        backgroundColor: 'green',
-        width: '50px',
-        height: '50px'
-      }
-    })
+    setInterval(() => {
+      this.setState({
+        style: {
+          backgroundColor: `${this.randomHexColor()}`,
+          width: '50px',
+          height: '50px'
+        }
+      })
+    }, 2000)
   }
 
   contextMenu = evt => {
@@ -62,7 +64,7 @@ class Pixel extends React.Component {
   }
 
   timedChange = evt => {
-    setInterval(() => {
+    this.setInterval(() => {
       this.setState({
         style: {
           backgroundColor: `${this.randomHexColor()}`,
@@ -81,7 +83,7 @@ class Pixel extends React.Component {
         onContextMenu={this.contextMenu} 
         onDoubleClick={this.doubleClick}
         onDragEnter={this.dragEnter}
-        onLoadStart={this.timedChange}
+        onLoad={this.timedChange}
       > </div>
     )
   }
