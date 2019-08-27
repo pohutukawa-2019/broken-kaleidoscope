@@ -3,44 +3,12 @@ import React from 'react'
 import Pixel from './Pixel'
 
 const App = () => {
+  const pixels = new Array(100000).fill(<Pixel />)
+
   return (
-    <div>
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-      <Pixel />
-    </div>
+    <React.Fragment>
+      {pixels}
+    </React.Fragment>
   )
 }
 
