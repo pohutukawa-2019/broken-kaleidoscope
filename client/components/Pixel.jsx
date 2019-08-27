@@ -6,8 +6,8 @@ class Pixel extends React.Component {
   
   state = {
     style: { 
-      height: 50,  
-      width: 50, 
+      height: 30,  
+      width: 30, 
       backgroundColor: this.randomHexColor()
     }
   }
@@ -27,11 +27,11 @@ class Pixel extends React.Component {
 
   render () {
    return (
-    <React.Fragment>
+    // <React.Fragment>
       <div style={this.state.style}
           onMouseEnter={this.clickHandler}></div>
 
-    </React.Fragment>
+    // </React.Fragment>
   )}
 
 }

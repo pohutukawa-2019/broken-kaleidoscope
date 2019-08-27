@@ -4,23 +4,9 @@ import Pixel from './Pixel'
 
 
 const App = () => {
-  return (
-    <React.Fragment> 
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
-      <Pixel/>
+  return ( 
+    <React.Fragment>
+    {Array.from({ length: 1000 }, () => <Pixel />)}
     </React.Fragment>
   )
 }
