@@ -4,13 +4,16 @@ import { genericTypeAnnotation } from '@babel/types';
 const randomHexColor = () =>
   `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
 
+
+
+
 class Pixel extends React.Component {
    
   state = {
     style: {
       backgroundColor: randomHexColor(),
-      height: "1px",
-      width: "1px"
+      height: "3px",
+      width: "3px"
     }
   }
 
@@ -18,8 +21,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: randomHexColor(),
-        height: "1px",
-        width: "1px"
+        height: "3px",
+        width: "3px"
       }
     })
   }
@@ -28,8 +31,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: "green",
-        height: "1px",
-        width: "1px"
+        height: "3px",
+        width: "3px"
       }
     })
   }
@@ -39,8 +42,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: "black",
-        height: "1px",
-        width: "1px"
+        height: "3px",
+        width: "3px"
       }
     })
   }
@@ -49,8 +52,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: "white",
-        height: "1px",
-        width: "1px"
+        height: "3px",
+        width: "3px"
       }
     })
   }
@@ -59,11 +62,34 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: "yellow",
-        height: "1px",
-        width: "1px"
+        height: "3px",
+        width: "3px"
       }
     })
   }
+
+  // changeColour = evt => {
+  //   this.setState({
+  //     style: {
+  //       backgroundColor: randomHexColor(),
+  //       height: "3px",
+  //       width: "3px"
+  //     }
+  //   }
+  //   )
+  // }
+
+    // setInterval(this.setState.changeColour, 1000)
+
+  // setInterval(() => {
+  //   this.setState({
+  //     style: {
+  //       backgroundColor: randomHexColor(),
+  //       height: "3px",
+  //       width: "3px"
+  //     }
+  //   }
+  // }, 1000)
 
 
   render () {
@@ -75,6 +101,7 @@ class Pixel extends React.Component {
         onContextMenu = {this.contextMenuHandler} 
         onDoubleClick = {this.doubleClickHandler}
         onDragEnter = {this.dragEnterHandler}
+        // onLoad = {this.setInterval}
       >
       </div>
     )
