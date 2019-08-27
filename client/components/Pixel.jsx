@@ -1,11 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 class Pixel extends React.Component {
   constructor (props) {
     super(props)
-    const randomHexColor = () =>
-      `#${Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, 0)}`
-    this.state = { style: { backgroundColor: `${randomHexColor()}`, width: '50px', height: '50px' } }
+    this.state = { style: { backgroundColor: `${this.randomHexColor()}`, width: '50px', height: '50px' } }
   }
 
   randomHexColor = () =>
@@ -15,8 +13,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: `${this.randomHexColor()}`,
-        width: '100px',
-        height: '100px'
+        width: '50px',
+        height: '50px'
       }
     })
   }
@@ -35,8 +33,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'black',
-        width: '20px',
-        height: '20px'
+        width: '50px',
+        height: '50px'
       }
     })
   }
@@ -45,8 +43,8 @@ class Pixel extends React.Component {
     this.setState({
       style: {
         backgroundColor: 'white',
-        width: '150px',
-        height: '150px'
+        width: '50px',
+        height: '50px'
       }
     })
   }
